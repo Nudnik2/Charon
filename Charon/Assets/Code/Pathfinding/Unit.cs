@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    public Transform target;
-    private float speed = 5f;
+    private Transform target;
+    private float speed = 2.5f;
 
     private Vector3[] path;
     private int targetIndex;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetPathTarget(Transform targetPoint)
     {
+        target = targetPoint;
         PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
     }
 
@@ -29,23 +29,30 @@ public class Unit : MonoBehaviour
     IEnumerator FollowPath()
     {
         Vector3 currentWaypoint = ForceWaypointHeight(path[0]);
+        bool hasReachedEnd = false;
 
-        while(true)
+        while(!hasReachedEnd)
         {
             if(transform.position == currentWaypoint)
             {
                 targetIndex++;
                 if (targetIndex >= path.Length)
                 {
-                    yield break;
+                    hasReachedEnd = true;
+            
                 }
-                //Force waypoint height
-                currentWaypoint = ForceWaypointHeight(path[targetIndex]);                                     
+                else
+                {
+                    //Force waypoint height
+                    currentWaypoint = ForceWaypointHeight(path[targetIndex]);
+                }            
             }
 
             transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
             yield return null;
         }
+
+        Destroy(this.gameObject);
     }
 
     //So NPC Doesn't Sink Down Into Ground

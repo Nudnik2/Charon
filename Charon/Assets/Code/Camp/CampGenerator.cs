@@ -50,6 +50,7 @@ public class CampGenerator : MonoBehaviour
             treeSpawnPositions.Add(treeSpawnPosition);
             GameObject newTree = Instantiate(treePrefab);
             newTree.transform.transform.position = treeSpawnPosition;
+            newTree.transform.parent = this.transform;
         }
     }
 
