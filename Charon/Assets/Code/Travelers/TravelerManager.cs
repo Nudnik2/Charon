@@ -23,7 +23,7 @@ public class TravelerManager : MonoBehaviour
     {
         while(true)
         {
-            float randomTime = Random.RandomRange(5, 10);
+            float randomTime = Random.Range(5, 10);
             yield return new WaitForSeconds(randomTime);
 
             Transform spawnTransform = travelerSpawnPositions[Random.Range(0, travelerSpawnPositions.Length)];

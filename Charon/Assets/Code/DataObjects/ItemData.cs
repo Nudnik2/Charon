@@ -8,6 +8,7 @@ public class ItemData : ScriptableObject
 {
     public string itemName;
     public ItemType itemType;
+    public GameObject itemPrefab;
     public enum ItemType
     {
         Consumable,

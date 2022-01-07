@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1493679215682459684}
   - component: {fileID: 3936204781806932782}
   - component: {fileID: -3133336813351840165}
+  - component: {fileID: 3303340934650623559}
   m_Layer: 6
   m_Name: BasicTree
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,3 +111,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3303340934650623559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507135072356273056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab5970e7322a8841816064cd443e3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableData: {fileID: 11400000, guid: ee3416940d29e744c89751301256efa0, type: 2}
+  maxTreeHealth: 40
+  treeTrunkPrefab: {fileID: 7720327196915501632, guid: 37ca98a20d5955c40a786274815099d3, type: 3}
+  spawnableItems:
+  - itemData: {fileID: 11400000, guid: bbc1214fa592d2e4c9d597f108ea5505, type: 2}
+    itemspawnChance: 100
+  - itemData: {fileID: 11400000, guid: bbc1214fa592d2e4c9d597f108ea5505, type: 2}
+    itemspawnChance: 100
+  - itemData: {fileID: 11400000, guid: bbc1214fa592d2e4c9d597f108ea5505, type: 2}
+    itemspawnChance: 70
+  - itemData: {fileID: 11400000, guid: bbc1214fa592d2e4c9d597f108ea5505, type: 2}
+    itemspawnChance: 25
+  - itemData: {fileID: 11400000, guid: bbc1214fa592d2e4c9d597f108ea5505, type: 2}
+    itemspawnChance: 5

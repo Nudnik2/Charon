@@ -5,10 +5,17 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     private Transform target;
-    private float speed = 2.5f;
+    private float speed = 1.75f;
 
     private Vector3[] path;
     private int targetIndex;
+
+    private Transform modelTransform;
+
+    private void Start()
+    {
+        modelTransform = this.transform.GetChild(0).transform;
+    }
 
     public void SetPathTarget(Transform targetPoint)
     {
@@ -49,6 +56,9 @@ public class Unit : MonoBehaviour
             }
 
             transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+            modelTransform.LookAt(new Vector3(currentWaypoint.x,
+                                              modelTransform.position.y,
+                                              currentWaypoint.z));
             yield return null;
         }
 

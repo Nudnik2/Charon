@@ -57,23 +57,28 @@
     <Compile Include="Assets\Code\Manager\GlobalManager.cs" />
     <Compile Include="Assets\Code\Pathfinding\Heap.cs" />
     <Compile Include="Assets\Store Packages\RTS_Camera\Scripts\RTS_Camera.cs" />
+    <Compile Include="Assets\Code\Player\PlayerInteractionController.cs" />
+    <Compile Include="Assets\Code\Interactables\Base Class\Interactable.cs" />
     <Compile Include="Assets\Code\Time\TimeOfDay.cs" />
     <Compile Include="Assets\Code\Pathfinding\PathRequestManager.cs" />
     <Compile Include="Assets\Code\Time\TimeManager.cs" />
+    <Compile Include="Assets\Code\Camp\CampGenerator.cs" />
     <Compile Include="Assets\Code\DataObjects\ItemData.cs" />
     <Compile Include="Assets\Code\DataObjects\CraftableData.cs" />
     <Compile Include="Assets\Store Packages\Shaderquest\Low Poly Free Pack\Water\TBS_Water.cs" />
     <Compile Include="Assets\Code\Items\InventoryItem.cs" />
+    <Compile Include="Assets\Code\Interactables\BasicTree.cs" />
     <Compile Include="Assets\Code\Travelers\TravelerManager.cs" />
     <Compile Include="Assets\Store Packages\Shaderquest\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />
     <Compile Include="Assets\Code\UI\UIClock.cs" />
     <Compile Include="Assets\Code\Pathfinding\Pathfinding.cs" />
     <Compile Include="Assets\Code\DataObjects\TravelerData.cs" />
+    <Compile Include="Assets\Code\DataObjects\InteractableData.cs" />
     <Compile Include="Assets\Code\Pathfinding\PathfindingNode.cs" />
     <Compile Include="Assets\Code\Pathfinding\Unit.cs" />
     <Compile Include="Assets\Code\DataObjects\ToolData.cs" />
     <Compile Include="Assets\Code\Player\PlayerInventoryManager.cs" />
-    <Compile Include="Assets\Code\Camp\CampGenerator.cs" />
+    <Compile Include="Assets\Code\Items\ItemSpawnRate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
